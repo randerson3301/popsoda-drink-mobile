@@ -9,4 +9,12 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">#fff</item>
+        <item name="colorControlActivated">#16366b</item>
+        <item name="colorAccent">#16366b</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+    </style>
+
 </resources>
