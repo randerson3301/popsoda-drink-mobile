@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@drawable/suco1">
+    android:background="@drawable/suco1"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,13 +33,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColorHint="#fff">
+            android:textColorHint="#fff"
+            >
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Usuário"
-                android:theme="@style/EditTextTheme"/>
+                android:theme="@style/EditTextTheme" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -45,7 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColorHint="#fff">
+            android:textColorHint="#fff"
+            >
 
             <EditText
                 android:layout_width="match_parent"
