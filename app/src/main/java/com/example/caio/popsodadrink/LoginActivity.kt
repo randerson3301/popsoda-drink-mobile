@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         txtCadastro.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, CadastroActivity::class.java))
         }
 
     }
