@@ -99,6 +99,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Comprar"
                                     android:textStyle="bold"
+                                    android:textColor="#fff"
                                     android:layout_marginLeft="35dp"
                                     android:background="@drawable/botao"/>
 
@@ -168,6 +169,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Comprar"
+                                    android:textColor="#fff"
                                     android:textStyle="bold"
                                     android:layout_marginLeft="35dp"
                                     android:background="@drawable/botao"/>
@@ -239,6 +241,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Comprar"
                                     android:textStyle="bold"
+                                    android:textColor="#fff"
                                     android:layout_marginLeft="35dp"
                                     android:background="@drawable/botao"/>
 
@@ -309,6 +312,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Comprar"
                                     android:textStyle="bold"
+                                    android:textColor="#fff"
                                     android:layout_marginLeft="35dp"
                                     android:background="@drawable/botao"/>
 
