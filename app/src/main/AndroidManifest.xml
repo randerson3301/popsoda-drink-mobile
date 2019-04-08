@@ -14,17 +14,19 @@
             android:name=".LoginActivity"
             android:theme="@style/EditTextTheme" />
         <activity android:name=".EstabelcimentosActivity" />
-        <activity android:name=".BrindesActivity" />
-        <activity android:name=".PagamentoActivity" />
-        <activity android:name=".PromocoesActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/EditTextTheme">
+        <activity android:name=".BrindesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".PagamentoActivity" />
+        <activity android:name=".PromocoesActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/EditTextTheme">
+
         </activity>
         <activity android:name=".EditarActivity" />
         <activity android:name=".PerfilActivity"></activity>
