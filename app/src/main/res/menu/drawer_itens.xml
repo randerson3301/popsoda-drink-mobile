@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Grupo de itens que conterão no menu-->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+
+            android:title="Fazer Login" />
+        <item
+            android:id="@+id/nav_perfil"
+
+            android:title="Meu Perfil" />
+        <item
+            android:id="@+id/nav_brindes"
+
+            android:title="Brindes" />
+        <item
+            android:id="@+id/nav_promo"
+
+            android:title="Promoções" />
+        <item
+            android:id="@+id/nav_places"
+
+            android:title="Estabelecimentos" />
+        <item
+            android:id="@+id/nav_dados"
+
+            android:title="Editar Dados" />
+    </group>
+
+</menu>

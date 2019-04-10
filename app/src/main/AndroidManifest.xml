@@ -11,10 +11,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CadastroActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".fragments.LoginFragment"
             android:theme="@style/EditTextTheme" />
-        <activity android:name=".EstabelcimentosActivity" />
-        <activity android:name=".BrindesActivity">
+        <activity android:name=".fragments.EstabelecimentosFragments" />
+        <activity android:name=".DrawerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,14 +22,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".PagamentoActivity" />
-        <activity android:name=".PromocoesActivity" />
+        <activity android:name=".fragments.PromocoesFragment" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/EditTextTheme">
 
         </activity>
-        <activity android:name=".EditarActivity" />
-        <activity android:name=".PerfilActivity"></activity>
+        <activity android:name=".fragments.EditarFragment" />
+        <activity android:name=".fragments.PerfilFragment"></activity>
     </application>
 
 </manifest>
