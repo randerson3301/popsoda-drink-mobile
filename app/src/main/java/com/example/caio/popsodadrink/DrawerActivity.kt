@@ -1,6 +1,6 @@
 package com.example.caio.popsodadrink
 
-import android.companion.CompanionDeviceManager
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
@@ -10,22 +10,19 @@ import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
-import java.util.*
-import kotlin.reflect.KClass
-import android.R.attr.fragment
-import android.R.attr.fragment
-import android.R.attr.fragment
-import android.content.Intent
+import android.view.WindowManager
 import com.example.caio.popsodadrink.fragments.*
 
 
 class DrawerActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drawer)
+
+        // Remove a barra de status
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         //setando o toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -33,7 +30,7 @@ class DrawerActivity : AppCompatActivity() {
         val actionbar: ActionBar? = supportActionBar
         actionbar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            setHomeAsUpIndicator(R.drawable.abc_ic_menu_copy_mtrl_am_alpha)
+            setHomeAsUpIndicator(R.drawable.menu)
         }
 
 
@@ -96,17 +93,21 @@ class DrawerActivity : AppCompatActivity() {
                 fragmentClass = PerfilFragment::class.java
 
             R.id.nav_login ->
-                fragmentClass = LoginFragment::class.java
+
+                startActivity(Intent(this, LoginActivity::class.java))
             else ->
+
                 fragmentClass = BrindesFragment::class.java
         }
 
+        if (fragmentClass != null){
+            fragment = fragmentClass?.newInstance() as Fragment
 
-        fragment = fragmentClass?.newInstance() as Fragment
+            val fragmentManager = supportFragmentManager
 
-        val fragmentManager = supportFragmentManager
+            fragmentManager.beginTransaction().replace(R.id.content, fragment).commit()
+        }
 
-        fragmentManager.beginTransaction().replace(R.id.content, fragment).commit()
 
 
         menuItem.isChecked = true
@@ -114,6 +115,7 @@ class DrawerActivity : AppCompatActivity() {
         //title = menuItem.title
 
     }
+
 
 
 }

@@ -16,10 +16,12 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/colorPrimary"
-            android:theme="@style/Theme.AppCompat"
-
+            android:paddingTop="30dp"
+            android:layout_height="80dp"
+            android:background="#16366b"
+            android:theme="@style/ToolbarTheme"
+            app:titleTextColor="#fff"
+            app:title="POP'S"
             />
     </FrameLayout>
 
@@ -28,6 +30,7 @@
         android:layout_height="match_parent"
         android:id="@+id/content"
         android:orientation="vertical"
+        android:paddingTop="40dp"
         >
 
     </LinearLayout>

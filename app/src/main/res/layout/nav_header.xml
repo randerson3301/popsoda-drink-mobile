@@ -6,20 +6,22 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
-    android:gravity="bottom">
+    android:gravity="center">
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/ic_user_white"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
         android:text="Não logado"
-        android:textSize="23sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
 
