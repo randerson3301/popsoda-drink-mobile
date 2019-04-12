@@ -1,7 +1,8 @@
-package com.example.caio.popsodadrink
+package com.example.caio.popsodadrink.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.caio.popsodadrink.R
 
 class CadastroActivity : AppCompatActivity() {
 

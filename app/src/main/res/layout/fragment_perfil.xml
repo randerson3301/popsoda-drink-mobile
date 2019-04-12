@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PerfilFragment"
-    android:orientation="vertical">
+    tools:context=".activity.fragments.PerfilFragment"
+    android:orientation="vertical"
+    android:paddingTop="40dp">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
         android:id="@+id/editar"
+        android:layout_gravity="right"
         android:background="@drawable/editar"/>
 
     <ImageView

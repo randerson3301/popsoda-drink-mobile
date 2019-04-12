@@ -1,4 +1,4 @@
-package com.example.caio.popsodadrink.fragments
+package com.example.caio.popsodadrink.activity.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
