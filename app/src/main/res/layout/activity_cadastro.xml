@@ -39,7 +39,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nome"/>
+                android:hint="Nome"
+                android:id="@+id/txt_nome"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -53,7 +54,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="CPF"/>
+                android:hint="Email"
+                android:id="@+id/txt_email"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -67,7 +69,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Usuário"/>
+                android:hint="CPF"
+                android:id="@+id/txt_cpf"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -81,7 +84,23 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Senha"/>
+                android:hint="Usuário"
+                android:id="@+id/txt_usuario"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:id="@+id/txt_senha"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -97,7 +116,8 @@
             android:textStyle="bold"
             android:textColor="#fff"
             android:background="@drawable/botao"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:id="@+id/btn_cadastro"/>
 
 
 </LinearLayout>

@@ -13,7 +13,6 @@ import android.view.MenuItem
 import android.view.WindowManager
 import com.example.caio.popsodadrink.R
 import com.example.caio.popsodadrink.activity.fragments.*
-import com.example.caio.popsodadrink.fragments.*
 
 
 class DrawerActivity : AppCompatActivity() {
