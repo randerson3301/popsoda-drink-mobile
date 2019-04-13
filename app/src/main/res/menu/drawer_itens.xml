@@ -22,10 +22,6 @@
             android:id="@+id/nav_places"
 
             android:title="Estabelecimentos" />
-        <item
-            android:id="@+id/nav_dados"
-
-            android:title="Editar Dados" />
     </group>
 
 </menu>

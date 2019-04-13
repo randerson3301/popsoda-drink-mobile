@@ -21,11 +21,15 @@ class CadastroPresenter(internal var view: CadastroView, internal var service: P
 
                 val result = response?.body()
 
+                view.showMessage("Sucesso", "Usuário cadastrado com sucesso!")
+
             }
 
             override fun onFailure(call: Call<ApiResult>?, t: Throwable?) {
 
                 t?.printStackTrace()
+
+                view.showMessage("Falha", "Erro ao fazer o cadastro!")
 
             }
 

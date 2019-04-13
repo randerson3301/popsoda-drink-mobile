@@ -17,17 +17,19 @@
         <activity
             android:name=".activity.DrawerActivity"
             android:theme="@style/EditTextTheme">
+
+        </activity>
+        <activity android:name=".activity.PagamentoActivity" />
+        <activity android:name=".activity.fragments.PromocoesFragment" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/EditTextTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PagamentoActivity" />
-        <activity android:name=".activity.fragments.PromocoesFragment" />
-        <activity
-            android:name=".activity.MainActivity"
-            android:theme="@style/EditTextTheme" />
         <activity android:name=".activity.fragments.EditarFragment" />
         <activity android:name=".activity.fragments.PerfilFragment" />
         <activity

@@ -12,7 +12,10 @@ import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import android.view.WindowManager
 import com.example.caio.popsodadrink.R
-import com.example.caio.popsodadrink.activity.fragments.*
+import com.example.caio.popsodadrink.activity.fragments.BrindesFragment
+import com.example.caio.popsodadrink.activity.fragments.EstabelecimentosFragments
+import com.example.caio.popsodadrink.activity.fragments.PerfilFragment
+import com.example.caio.popsodadrink.activity.fragments.PromocoesFragment
 
 
 class DrawerActivity : AppCompatActivity() {
@@ -80,10 +83,6 @@ class DrawerActivity : AppCompatActivity() {
             R.id.nav_promo ->
 
                 fragmentClass = PromocoesFragment::class.java
-
-            R.id.nav_dados ->
-
-                fragmentClass = EditarFragment::class.java
 
             R.id.nav_places ->
 
