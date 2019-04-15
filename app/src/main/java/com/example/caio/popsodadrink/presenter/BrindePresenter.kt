@@ -6,7 +6,7 @@ import com.example.caio.popsodadrink.view.BrindeView
 import retrofit2.Call
 import retrofit2.Response
 
-class BrindePresenter(val service: PopsService, val brindeView: BrindeView) {
+class BrindePresenter(internal val service: PopsService, internal val brindeView: BrindeView) {
 
     /*
     * O presenter irá cruzar a interface View com o service que faz o request na api

@@ -14,6 +14,9 @@ interface PopsService {
     @POST("/user/add")
     fun cadastrarUsuario(@Body usuario: Usuario): Call<ApiResult>
 
+    @POST("/user/login")
+    fun loginUsuario(@Body usuario: Usuario): Call<Usuario>
+
     @GET("/brinde")
     fun getBrindes(): Call<Brinde>
 
