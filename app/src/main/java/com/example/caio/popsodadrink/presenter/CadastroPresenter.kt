@@ -3,7 +3,7 @@ package com.example.caio.popsodadrink.presenter
 import com.example.caio.popsodadrink.model.ApiResult
 import com.example.caio.popsodadrink.model.Usuario
 import com.example.caio.popsodadrink.service.PopsService
-import com.example.caio.popsodadrink.view.UsuarioView
+import com.example.caio.popsodadrink.view.CadastroView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -11,7 +11,7 @@ import retrofit2.Response
 
 
 
-class UsuarioPresenter(internal var view: UsuarioView, internal var service: PopsService) {
+class CadastroPresenter(internal var view: CadastroView, internal var service: PopsService) {
 
     fun cadastrarUsuario(usuario: Usuario) {
 
@@ -37,20 +37,7 @@ class UsuarioPresenter(internal var view: UsuarioView, internal var service: Pop
 
     }
 
-    fun loginUsuario(usuario: Usuario){
-        service.loginUsuario(usuario).enqueue(object: Callback<Usuario>{
-            override fun onResponse(call: Call<Usuario>?, response: Response<Usuario>?) {
-                val result = response?.body()
 
-                view.login("Funcionou!")
-            }
-
-            override fun onFailure(call: Call<Usuario>?, t: Throwable?) {
-                t?.printStackTrace()
-                view.login("Não Funcionou!")
-            }
-        })
-    }
 }
 
 

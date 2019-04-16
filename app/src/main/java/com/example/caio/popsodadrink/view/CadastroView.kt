@@ -1,9 +1,9 @@
 package com.example.caio.popsodadrink.view
 
-interface UsuarioView {
+interface CadastroView {
 
     fun showMessage(titulo: String, mensagem: String)
 
-    fun login(mensagem: String)
+
 
 }

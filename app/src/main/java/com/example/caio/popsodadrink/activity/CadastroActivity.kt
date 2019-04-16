@@ -6,16 +6,14 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import com.example.caio.popsodadrink.R
 import com.example.caio.popsodadrink.model.Usuario
-import com.example.caio.popsodadrink.presenter.UsuarioPresenter
+import com.example.caio.popsodadrink.presenter.CadastroPresenter
 import com.example.caio.popsodadrink.service.ServiceFactory
-import com.example.caio.popsodadrink.view.UsuarioView
+import com.example.caio.popsodadrink.view.CadastroView
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
 
-class CadastroActivity : AppCompatActivity(), UsuarioView {
-    override fun login(mensagem: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+class CadastroActivity : AppCompatActivity(), CadastroView {
+
 
     var service = ServiceFactory().create()
 
@@ -23,7 +21,7 @@ class CadastroActivity : AppCompatActivity(), UsuarioView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
 
-        var presenter = UsuarioPresenter(this, service)
+        var presenter = CadastroPresenter(this, service)
 
         btn_cadastro.setOnClickListener {
 
