@@ -19,9 +19,14 @@ interface PopsService {
             //parametros necessários para retornar os dados do Usuario logado
             @Field("user") username: String,
             @Field("password")password: String
-            ): Call<Usuario>
+            ): Call<Login>
 
     @GET("/brinde")
     fun getBrindes(): Call<Brinde>
+
+    @GET("/user/{user_id}")
+    fun getUserById(
+           @Path("user_id") userId: Int
+    ): Call<Usuario>
 
 }

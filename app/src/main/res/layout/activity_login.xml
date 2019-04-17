@@ -71,7 +71,9 @@
             android:text="Entrar"
             android:textStyle="bold"
             android:background="@drawable/botao_login"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:id="@+id/btn_login"
+            />
 
         <TextView
             android:layout_width="wrap_content"

@@ -1,6 +1,8 @@
 package com.example.caio.popsodadrink.presenter
 
+import android.util.JsonReader
 import com.example.caio.popsodadrink.model.Brinde
+import com.example.caio.popsodadrink.model.Login
 import com.example.caio.popsodadrink.model.Usuario
 import com.example.caio.popsodadrink.service.PopsService
 import com.example.caio.popsodadrink.view.BrindeView
@@ -15,15 +17,16 @@ class LoginPresenter(internal val service: PopsService, internal val loginView: 
     fun doLogin( username: String, password: String){
 
 
-        service.loginUsuario(username, password).enqueue(object : Callback<Usuario>{
+        service.loginUsuario(username, password).enqueue(object : Callback<Login>{
 
-            override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
+            override fun onResponse(call: Call<Login>, response: Response<Login>) {
                 val result = response?.body()
+                loginView.getLoginResult(result!!.response)
+                System.out.println(result?.response)
+        }
 
-                loginView.showMessage("Sucesso", "Você está logado")
-            }
-
-            override fun onFailure(call: Call<Usuario>, t: Throwable) {
+            override fun onFailure(call: Call<Login>, t: Throwable) {
+                System.out.println("Não Foi")
                 t.localizedMessage
             }
         })
