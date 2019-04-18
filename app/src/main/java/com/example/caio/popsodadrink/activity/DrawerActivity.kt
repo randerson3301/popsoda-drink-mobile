@@ -144,13 +144,13 @@ class DrawerActivity : AppCompatActivity(), UsuarioView {
     override fun getUser(list: List<LoginResult>) {
 
            txt_login.text = list[0].nome
-           txt_teste.text = list[0].email
+           //txt_teste.text = list[0].email
 
            println(list[0].cpf)
            println(list[0].email)
            println(list[0].nome)
 
-           println("Ainda não")
+
 
     }
 

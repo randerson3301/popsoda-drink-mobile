@@ -19,8 +19,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
     override fun getLoginResult(list: List<LoginResult>) {
         val alert = AlertDialog.Builder(this)
-        alert.setTitle("User")
-        alert.setMessage("" + list[0].userId)
+        alert.setTitle("Ok")
+        alert.setMessage("Autenticado com sucesso!")
         alert.setPositiveButton("Ok", null)
         putExtra(list[0].userId)
         alert.show()

@@ -16,7 +16,7 @@ class UsuarioPresenter(internal val service: PopsService, internal val userView:
             override fun onResponse(call: Call<LoginResult>, response: Response<LoginResult>) {
                 val result = response.body()
 
-               // userView.getUser(result)
+               userView.getUser(result!!.response)
 
                 println("foi")
 
