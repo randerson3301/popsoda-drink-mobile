@@ -2,10 +2,9 @@ package com.example.caio.popsodadrink.model
 
 import com.google.gson.annotations.SerializedName
 
-
-class Usuario (
-
-
+class LoginResult (
+        @SerializedName("id_p_fisica")
+        var userId: Int,
     @SerializedName("name")
     var nome: String,
 
@@ -16,9 +15,5 @@ class Usuario (
     var cpf: String,
 
     @SerializedName("user")
-    var login: String,
-
-    @SerializedName("password")
-    var senha: String
-
-)
+    var login: String
+    )

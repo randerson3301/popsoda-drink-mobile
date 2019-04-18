@@ -1,32 +1,28 @@
 package com.example.caio.popsodadrink.activity
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.WindowManager
 import com.example.caio.popsodadrink.R
+import com.example.caio.popsodadrink.model.LoginResult
 import com.example.caio.popsodadrink.model.Usuario
 import com.example.caio.popsodadrink.presenter.LoginPresenter
 import com.example.caio.popsodadrink.service.ServiceFactory
 import com.example.caio.popsodadrink.view.LoginView
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.nav_header.*
-
-
-
 
 class LoginActivity : AppCompatActivity(), LoginView {
 
     val service = ServiceFactory().create()
 
-    override fun getLoginResult(list: List<Usuario>) {
+    override fun getLoginResult(list: List<LoginResult>) {
         val alert = AlertDialog.Builder(this)
         alert.setTitle("User")
-        alert.setMessage("" + list[0].cpf)
+        alert.setMessage("" + list[0].userId)
         alert.setPositiveButton("Ok", null)
-
+        putExtra(list[0].userId)
         alert.show()
     }
 
@@ -56,5 +52,11 @@ class LoginActivity : AppCompatActivity(), LoginView {
             startActivity(Intent(this, CadastroActivity::class.java))
         }
 
+    }
+
+    fun putExtra(userId: Int){
+        val intent = Intent(this, DrawerActivity::class.java)
+        intent.putExtra("userId", userId)
+        startActivity(intent)
     }
 }

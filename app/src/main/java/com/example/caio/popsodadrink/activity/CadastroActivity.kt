@@ -26,6 +26,7 @@ class CadastroActivity : AppCompatActivity(), CadastroView {
         btn_cadastro.setOnClickListener {
 
             var usuario = Usuario(
+
                     txt_nome.text.toString(),
                     txt_email.text.toString(),
                     txt_cpf.text.toString(),

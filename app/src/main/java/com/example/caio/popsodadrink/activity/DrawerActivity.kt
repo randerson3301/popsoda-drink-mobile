@@ -16,9 +16,19 @@ import com.example.caio.popsodadrink.activity.fragments.BrindesFragment
 import com.example.caio.popsodadrink.activity.fragments.EstabelecimentosFragments
 import com.example.caio.popsodadrink.activity.fragments.PerfilFragment
 import com.example.caio.popsodadrink.activity.fragments.PromocoesFragment
+import com.example.caio.popsodadrink.model.LoginResult
+import com.example.caio.popsodadrink.model.Usuario
+import com.example.caio.popsodadrink.presenter.UsuarioPresenter
+import com.example.caio.popsodadrink.service.ServiceFactory
+import com.example.caio.popsodadrink.view.LoginView
+import com.example.caio.popsodadrink.view.UsuarioView
+import kotlinx.android.synthetic.main.activity_drawer.*
+import kotlinx.android.synthetic.main.nav_header.*
 
 
-class DrawerActivity : AppCompatActivity() {
+class DrawerActivity : AppCompatActivity(), UsuarioView {
+
+
     private lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,14 +46,31 @@ class DrawerActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.menu)
         }
-
-
         drawerLayout = findViewById(R.id.drawer_layout)
-
         val navigationView: NavigationView = findViewById(R.id.nav_view)
 
         setupDrawerContent(navigationView)
 
+        val id: Int = intent.getIntExtra("userId",0)
+        if(id > 0)
+            requestOnAPI(id)
+        else
+           println("awiwa")
+
+
+
+    }
+
+
+    fun requestOnAPI(id:Int){
+
+        println(id)
+
+       val service = ServiceFactory().create()
+
+        val presenter =  UsuarioPresenter(service, this)
+
+        presenter.getUserById(id)
     }
 
     //permite que o menu drawer possa abrir quando o icon do canto for tocado
@@ -108,14 +135,23 @@ class DrawerActivity : AppCompatActivity() {
             fragmentManager.beginTransaction().replace(R.id.content, fragment).commit()
         }
 
-
-
         menuItem.isChecked = true
         drawerLayout.closeDrawers()
         //title = menuItem.title
 
     }
 
+    override fun getUser(list: List<LoginResult>) {
 
+           txt_login.text = list[0].nome
+           txt_teste.text = list[0].email
+
+           println(list[0].cpf)
+           println(list[0].email)
+           println(list[0].nome)
+
+           println("Ainda não")
+
+    }
 
 }

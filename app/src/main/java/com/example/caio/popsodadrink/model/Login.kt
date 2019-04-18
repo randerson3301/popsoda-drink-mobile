@@ -9,5 +9,5 @@ import java.util.*
 class Login (
         @SerializedName("success") @Expose var success: Boolean,
         @SerializedName("message") @Expose var message: String,
-        @SerializedName("response") @Expose var response: List<Usuario>
+        @SerializedName("response") @Expose var response: List<LoginResult>
         )

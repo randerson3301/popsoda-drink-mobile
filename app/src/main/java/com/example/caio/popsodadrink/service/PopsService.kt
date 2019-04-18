@@ -1,9 +1,6 @@
 package com.example.caio.popsodadrink.service
 
-import com.example.caio.popsodadrink.model.ApiResult
-import com.example.caio.popsodadrink.model.Brinde
-import com.example.caio.popsodadrink.model.Login
-import com.example.caio.popsodadrink.model.Usuario
+import com.example.caio.popsodadrink.model.*
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -27,6 +24,6 @@ interface PopsService {
     @GET("/user/{user_id}")
     fun getUserById(
            @Path("user_id") userId: Int
-    ): Call<Usuario>
+    ): Call<LoginResult>
 
 }

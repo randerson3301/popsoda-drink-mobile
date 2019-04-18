@@ -32,7 +32,10 @@
         android:orientation="vertical"
         android:paddingTop="40dp"
         >
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_teste"/>
     </LinearLayout>
     <!--<fragment
         android:layout_width="match_parent"

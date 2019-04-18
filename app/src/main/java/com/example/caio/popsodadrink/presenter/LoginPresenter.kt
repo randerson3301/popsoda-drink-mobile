@@ -3,6 +3,7 @@ package com.example.caio.popsodadrink.presenter
 import android.util.JsonReader
 import com.example.caio.popsodadrink.model.Brinde
 import com.example.caio.popsodadrink.model.Login
+import com.example.caio.popsodadrink.model.LoginResult
 import com.example.caio.popsodadrink.model.Usuario
 import com.example.caio.popsodadrink.service.PopsService
 import com.example.caio.popsodadrink.view.BrindeView
